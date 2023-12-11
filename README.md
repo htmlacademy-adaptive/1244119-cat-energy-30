@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Михаил Волощенко](https://up.htmlacademy.ru/adaptive/30/user/1244119).
-* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
+* Наставник: [Наталья Зотова](https://htmlacademy.ru/profile/id1079951).
 
 ---
 
