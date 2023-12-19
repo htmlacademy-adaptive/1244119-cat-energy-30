@@ -1,0 +1,43 @@
+.card__title {
+  font-size: 16px;
+  list-style: 20px;
+  text-transform: uppercase;
+  color: $dark-grey;
+}
+
+.card__term {
+  font-family: $lato;
+  font-size: 12px;
+  list-style: 16px;
+  color: $grey;
+}
+
+.card__desc {
+  font-family: $lato;
+  font-size: 12px;
+  list-style: 16px;
+  color: $grey;
+}
+
+.card__button {
+  font-size: 16px;
+  list-style: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ff0000;
+}
+
+.card__text {
+  font-family: $lato;
+  font-size: 12px;
+  list-style: 16px;
+  color: $grey;
+}
+
+.card__button--more {
+  font-size: 16px;
+  list-style: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $grey;
+}

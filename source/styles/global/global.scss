@@ -1,1 +1,19 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: 400;
+  color: $color;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}

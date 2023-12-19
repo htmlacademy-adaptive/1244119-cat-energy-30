@@ -1,0 +1,21 @@
+.product__title {
+  font-size: 16px;
+  list-style: 16px;
+  text-transform: uppercase;
+  color: $dark-grey;
+}
+
+.product__text {
+  font-family: $lato;
+  font-size: 14px;
+  list-style: 14px;
+  color: $grey;
+}
+
+.product__button {
+  font-size: 16px;
+  list-style: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ff0000;
+}

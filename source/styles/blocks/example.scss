@@ -1,0 +1,23 @@
+.example__title {
+  font-size: 36px;
+  list-style: 40px;
+}
+
+.example__desc {
+  font-family: $lato;
+  font-size: 14px;
+  list-style: 18px;
+}
+
+.example__subtitle {
+  font-size: 24px;
+  list-style: 24px;
+  text-transform: uppercase;
+}
+
+.example__text {
+  font-family: $lato;
+  font-size: 12px;
+  list-style: 12px;
+  color: $grey;
+}
