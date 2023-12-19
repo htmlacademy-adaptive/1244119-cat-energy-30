@@ -1,0 +1,40 @@
+.form__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form__label {
+  font-size: 16px;
+  list-style: 18px;
+  text-transform: uppercase;
+  color: $grey;
+}
+
+.form__input {
+  &::placeholder {
+    font-family: $oswald;
+    font-size: 16px;
+    list-style: 18px;
+    text-transform: uppercase;
+    color: $grey;
+  }
+}
+
+.form__title {
+  font-size: 24px;
+  list-style: 26px;
+}
+
+.form__button {
+  font-size: 16px;
+  list-style: 20px;
+  text-transform: uppercase;
+  color: #ff0000;
+}
+
+.form__text {
+  font-family: $lato;
+  font-size: 14px;
+  list-style: 16px;
+}
