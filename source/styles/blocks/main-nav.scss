@@ -1,0 +1,49 @@
+.main-nav {
+  position: relative;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 1px;
+  top: -28px;
+  width: 24px;
+  height: 16px;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    position: relative;
+    display: inline-block;
+    right: 0;
+    top: 0;
+    background-color: $black;
+    width: 24px;
+    height: 2px;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 24px;
+      height: 2px;
+      background-color: $black;
+    }
+
+    &::after {
+      top: -8px;
+    }
+
+    &::before {
+      top: 8px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

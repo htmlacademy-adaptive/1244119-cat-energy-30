@@ -1,26 +1,98 @@
+.program__container {
+  margin-top: 20px;
+}
+
 .program__list {
-  list-style: none;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+.program__item {
+  padding-bottom: 18px;
+  background-color: $super-light-grey;
+}
+
 .program__heading {
+  position: relative;
   font-size: 24px;
-  list-style: 37px;
+  line-height: 37px;
+  font-weight: 400;
   text-transform: uppercase;
+  padding-top: 30px;
+  padding-left: 90px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $green;
+    top: 24px;
+    left: 20px;
+  }
+}
+
+.program__heading--diet::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../images/icons/stack.svg#cat-diet");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 36px;
+  height: 50px;
+  top: 21px;
+  left: 27px;
+  z-index: 1;
+}
+
+.program__heading--muscular::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../images/icons/stack.svg#cat-muscular");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 67px;
+  height: 28px;
+  top: 35px;
+  left: 13px;
+  z-index: 1;
 }
 
 .program__text {
   font-family: $lato;
   font-size: 14px;
-  list-style: 18px;
+  line-height: 18px;
+  font-weight: 400;
   color: $grey;
+  padding: 29px 21px 38px;
+  width: 278px;
 }
 
 .program__link {
+  position: relative;
   font-size: 16px;
-  list-style: 16px;
+  line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
   color: inherit;
+  padding: 5px;
+  padding-right: 50px;
+  margin-left: 15px;
+}
+
+.program__link::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../images/icons/stack.svg#arrow");
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 37px;
+  height: 12px;
+  top: 11px;
+  left: 105px;
 }
