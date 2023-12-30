@@ -1,0 +1,18 @@
+.slider {
+  display: grid;
+  grid-template-columns: 140px 140px;
+  margin-top: 20px;
+  padding-bottom: 29px;
+}
+
+.slider__image--before img {
+  object-fit: cover;
+  object-position: left;
+  height: 256px;
+}
+
+.slider__image--after img {
+  object-fit: cover;
+  object-position: right;
+  height: 256px;
+}

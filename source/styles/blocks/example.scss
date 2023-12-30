@@ -1,23 +1,75 @@
+.example {
+  background-color: $ultra-light-grey;
+}
+
+.example__container {
+  margin-top: 53px;
+}
+
 .example__title {
-  font-size: 36px;
-  list-style: 40px;
+  padding-top: 25px;
 }
 
 .example__desc {
   font-family: $lato;
   font-size: 14px;
-  list-style: 18px;
+  line-height: 18px;
+  padding-top: 41px;
+  width: 278px;
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 .example__subtitle {
+  position: relative;
   font-size: 24px;
-  list-style: 24px;
+  line-height: 24px;
   text-transform: uppercase;
+  width: 124px;
+  margin-top: 3px;
+  padding-top: 14px;
+  padding-bottom: 16px;
+  border: 1px solid $border-hover-grey;
+  border-radius: 3px;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   background-image: url("../../images/icons/stack.svg#frame");
+  //   background-repeat: no-repeat;
+  //   object-fit: cover;
+  //   width: 124px;
+  //   height: 56px;
+  //   top: 0;
+  //   left: 0;
+  // }
 }
 
 .example__text {
   font-family: $lato;
   font-size: 12px;
-  list-style: 12px;
+  line-height: 12px;
+  font-weight: 400;
   color: $grey;
+  text-align: center;
+  margin: 0;
+  padding: 0 16px 0 15px;
+  background-color: $ultra-light-grey;
+  position: relative;
+  width: 87px;
+  left: 18px;
+  bottom: 9px;
+  z-index: 1;
+}
+
+.example__cost {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
 }

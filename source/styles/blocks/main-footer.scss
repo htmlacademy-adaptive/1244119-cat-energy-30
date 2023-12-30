@@ -1,0 +1,19 @@
+.main-footer {
+  background-color: $super-light-grey;
+}
+
+.main-footer__map {
+  background-color: $white;
+}
+
+.main-footer__container {
+  display: grid;
+  grid-template-rows: repeat(3, 80px);
+  align-items: center;
+  justify-items: center;
+}
+
+.main-footer__logo {
+  padding: 8px;
+  margin-top: 28px;
+}

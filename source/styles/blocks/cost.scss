@@ -1,5 +1,15 @@
+.cost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7px;
+  margin-left: 46px;
+  padding-top: 3px;
+  width: 188px;
+}
+
 .cost__total {
   font-size: 14px;
-  list-style: 20px;
+  line-height: 20px;
   text-transform: uppercase;
 }
