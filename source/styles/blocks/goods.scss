@@ -1,10 +1,109 @@
+.goods {
+  overflow: hidden;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 88px;
+  }
+}
+
+.goods__container {
+  margin-top: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 76px;
+  }
+}
+
 .goods__title {
+  position: relative;
   font-size: 24px;
-  list-style: 24px;
+  line-height: 24px;
+  font-weight: 400;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 2px;
+    background-color: $green;
+    top: 15px;
+    left: 245px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 40px;
+
+    &::before {
+      top: 22px;
+      left: 418px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 2px;
+      background-color: $green;
+      top: 22px;
+      right: 708px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+
+    &::before {
+      top: 23px;
+      left: 378px;
+    }
+
+    &::after {
+      top: 23px;
+      right: 1260px;
+    }
+  }
+}
+
+.goods__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .goods__list {
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
+  margin-top: 35px;
+  border-top: 1px solid $moderate-grey;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 895px;
+    margin-top: 79px;
+  }
+}
+
+.goods__item {
+  border-bottom: 1px solid $moderate-grey;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    border-left: 1px solid $moderate-grey;
+    border-right: 1px solid $moderate-grey;
+  }
 }

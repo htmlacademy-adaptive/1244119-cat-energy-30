@@ -1,21 +1,85 @@
+.product {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 1fr 1fr 244px;
+      grid-template-rows: 71px;
+    }
+  }
+}
+
 .product__title {
   font-size: 16px;
-  list-style: 16px;
+  line-height: 16px;
+  font-weight: 400;
   text-transform: uppercase;
   color: $dark-grey;
+  padding-top: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 25px;
+    padding-left: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 2px;
+  }
+}
+
+.product__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-left: 1px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    gap: 50px;
+    padding-top: 29px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+    padding-top: 28px;
+    padding-right: 41px;
+  }
 }
 
 .product__text {
   font-family: $lato;
   font-size: 14px;
-  list-style: 14px;
+  line-height: 14px;
   color: $grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .product__button {
+  display: block;
   font-size: 16px;
-  list-style: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ff0000;
+  line-height: 20px;
+  margin-bottom: 18px;
+  padding: 10px 109px;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    grid-area: 2/1/3/3;
+    width: 632px;
+    margin: 2px 0 27px 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 15px;
+    margin-bottom: 16px;
+    padding: 10px 0;
+  }
 }
