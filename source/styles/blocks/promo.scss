@@ -3,31 +3,65 @@
   position: relative;
 
   &::before {
-    content: "";
-    position: absolute;
-    background-color: rgba(104, 183, 56, 0.85);
-    width: 100%;
-    height: 302px;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    @media (min-width: $mobile-width) and (max-width: 767px) {
+      content: "";
+      position: absolute;
+      background-color: rgba(104, 183, 56, 0.85);
+      width: 100%;
+      height: 302px;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      background-color: rgba(104, 183, 56, 0.85);
+      width: 50%;
+      height: 694px;
+      top: -128px;
+      right: 0;
+      z-index: 1;
+    }
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../../images/cat-mobile@1x.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 302px;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    @media (min-width: $mobile-width) and (max-width: 767px) {
+      content: "";
+      position: absolute;
+      background-image: url("../../images/cat-mobile@1x.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      height: 302px;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
 
     @media (min-resolution: 2dppx) {
       background-image: url("../../images/cat-mobile@2x.png");
+    }
+
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      background-image: url("../../images/cat-desktop@1x.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100%;
+      max-width: 1040px;
+      height: 694px;
+      top: -128px;
+      left: 50%;
+      z-index: -1;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../images/cat-desktop@2x.png");
     }
   }
 }
@@ -35,6 +69,14 @@
 .promo__container {
   position: relative;
   z-index: 2;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    height: 820px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 566px;
+  }
 }
 
 .promo__title {
@@ -44,7 +86,7 @@
   color: $white;
   padding-top: 27px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: 767px) {
     text-align: center;
   }
 
@@ -52,6 +94,13 @@
     font-size: 60px;
     line-height: 60px;
     color: $black;
+    padding-top: 51px;
+    padding-left: 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 96px;
+    padding-left: 80px;
   }
 }
 
@@ -64,8 +113,34 @@
   padding-top: 25px;
   padding-bottom: 29px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: 767px) {
     text-align: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    color: $black;
+    padding-top: 40px;
+    padding-left: 92px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 40px;
+    padding-left: 82px;
+  }
+}
+
+.promo__image {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    bottom: 37px;
+    left: 41px;
+
+    @media (min-width: $desktop-width) {
+      bottom: 290px;
+      left: 447px;
+    }
   }
 }
 
@@ -81,4 +156,20 @@
   text-align: center;
   margin-top: -2px;
   padding: 10px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    display: inline-block;
+    width: 244px;
+    padding: 14px 26px;
+    position: relative;
+    bottom: 590px;
+    left: 90px;
+
+    @media (min-width: $desktop-width) {
+      bottom: 479px;
+      left: 80px;
+    }
+  }
 }

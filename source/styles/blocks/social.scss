@@ -1,10 +1,32 @@
 .social {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
   list-style-type: none;
-  width: 126px;
-  margin: 0 5px 4px 0;
-  padding: 0;
-  position: relative;
+  width: 100%;
+  margin: 0 5px 5px 0;
+  padding: 23px 0;
+  // position: relative;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    border-top: 1px solid $bright-grey;
+    border-bottom: 1px solid $bright-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    gap: 18px;
+    width: auto;
+    margin: 0;
+    padding: 3px 0 0 31px;
+  }
+}
+
+
+.social__item {
+  @media (min-width: $tablet-width) {
+    padding: 5px;
+  }
 }

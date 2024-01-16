@@ -10,21 +10,24 @@ $white: #ffffff;
 $black: #000000;
 $super-dark-grey: #111111;
 $dark-grey: #222222;
+$deep-grey: #3e3e3e;
 $grey: #444444;
 $light-grey: #666666;
+$dirty-grey: #6b6b6b;
+$dull-grey: #d3d3d3;
+$pale-grey: #e6e6e6;
 $super-light-grey:#f2f2f2;
 $ultra-light-grey:#eaeaea;
+$border-grey: #e7e7e7;
+$moderate-grey: #cdcdcd;
+$soft-grey: #bababa;
+$bright-grey: #d9d9d9;
 $green: #68b738;
 $dark-green: #5eaa2f;
-$border-grey: #e7e7e7;
-$border-hover-grey: #cdcdcd;
-$border-form: #bababa;
-$border-social: #d9d9d9;
-$logo-focus: #3e3e3e;
-$logo-activ: #6b6b6b;
 $error: #ff8282;
 
 // Viewports
 
+$mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;

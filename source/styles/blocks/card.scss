@@ -1,8 +1,101 @@
+.card {
+  @media (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.card__link-img {
+  display: block;
+  width: 140px;
+  height: 107px;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+    height: 210px;
+    margin-top: 10px;
+    margin-left: 62px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+    margin-top: 9px;
+    margin-left: 21px;
+  }
+}
+
+.card__image {
+  transform: translate(53%, 33%);
+
+  @media (min-width: $tablet-width) {
+    transform: translate(13%, 12%);
+  }
+}
+
+.card__wrapper {
+  width: 139px;
+  margin-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+    margin-top: 23px;
+    margin-left: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+    margin-top: 12px;
+    margin-left: 38px;
+  }
+}
+
+.card__link-title {
+  text-decoration: none;
+}
+
 .card__title {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
   color: $dark-grey;
+  width: 75px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    width: 130px;
+    margin: 0 auto;
+  }
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-top: 14px;
+
+  @media (min-width: $tablet-width) {
+    gap: 7px;
+    margin-top: 19px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 25px;
+    margin-bottom: 37px;
+  }
+}
+
+.card__item {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 4px;
+    border-bottom: 1px solid $moderate-grey;
+  }
 }
 
 .card__term {
@@ -10,6 +103,11 @@
   font-size: 12px;
   line-height: 16px;
   color: $grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .card__desc {
@@ -17,14 +115,32 @@
   font-size: 12px;
   line-height: 16px;
   color: $grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .card__button {
+  display: block;
   font-size: 16px;
   line-height: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ff0000;
+  width: 280px;
+  height: 40px;
+  padding: 10px 0;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+    margin-left: 37px;
+    padding: 10px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+    margin-left: 38px;
+  }
 }
 
 .card__text {
@@ -32,6 +148,96 @@
   font-size: 12px;
   line-height: 16px;
   color: $grey;
+}
+
+.card--more {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    height: 429px;
+    border: 2px solid $super-light-grey;
+  }
+
+  .card__title {
+    text-align: center;
+    width: 100%;
+    padding-top: 79px;
+
+    @media (min-width: $tablet-width) {
+      width: 140px;
+      padding-top: 159px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 147px;
+    }
+  }
+
+  .card__text {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 18px;
+      width: 175px;
+      margin: 0 auto;
+      padding-top: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 26px;
+    }
+  }
+
+  .card__button {
+    font-size: 16px;
+    line-height: 20px;
+    width: 280px;
+    padding: 10px 0;
+    margin-bottom: 13px;
+    color: $grey;
+    background-color: $super-light-grey;
+
+    @media (min-width: $tablet-width) {
+      width: 250px;
+      margin-top: 73px;
+      margin-left: 35px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 169px;
+      margin-top: 80px;
+      margin-left: 36px;
+    }
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: $dull-grey;
+    top: 25px;
+    left: 139px;
+
+    @media (min-width: $tablet-width) {
+      height: 60px;
+      top: 49px;
+      left: 160px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 47px;
+      left: 120px;
+    }
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
 }
 
 .card__button--more {

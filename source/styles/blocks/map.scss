@@ -1,14 +1,30 @@
+.map--index {
+  background-color: $white;
+}
+
 .map__contact {
   display: flex;
   width: 100%;
   gap: 16px;
-  margin: 26px 0;
+  padding: 26px 0;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    padding-top: 60px;
+  }
 }
 
 .map__title {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 235px;
+    padding-left: 40px;
+  }
 }
 
 .map__address {
@@ -16,8 +32,35 @@
   font-size: 14px;
   line-height: 20px;
   color: $grey;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 230px;
+    padding-right: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+.map__br {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .map__iframe-container {
   padding-bottom: 204px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 35px;
+    padding-bottom: 239px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 37px;
+  }
 }

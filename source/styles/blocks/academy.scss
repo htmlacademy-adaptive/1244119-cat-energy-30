@@ -5,6 +5,11 @@
   text-decoration: none;
   width: 280px;
   margin-bottom: 34px;
+
+  @media (min-width: $tablet-width) {
+    width: 162px;
+    margin-bottom: 5px;
+  }
 }
 
 .academy__text {

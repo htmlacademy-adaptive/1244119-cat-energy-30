@@ -27,10 +27,8 @@
             <img class="logo__image logo__image--text" src="images/logo/logo-text.svg" width="101" height="18" alt="Cat Energy">
           </picture>
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
-            <span></span>
-          </button>
+        <nav class="main-nav main-nav--close">
+          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"><span></span></button>
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a class="site-list__link" href="index.html">Главная</a>
@@ -274,51 +272,61 @@
       </section>
 
       <section class="goods">
-        <div class="goods__wrapper">
+        <div class="goods__container container">
           <h2 class="goods__title">Дополнительные товары</h2>
 
-          <ul class="goods__list">
-            <li class="goods__item product">
-              <h3 class="product__title">Сахарозаменитель</h3>
-              <p class="product__text">1 упаковка (100 г)</p>
-              <p class="product__text">200 ₽</p>
-              <a class="product__button button" href="#">Заказать</a>
-            </li>
+          <div class="goods__wrapper">
+            <ul class="goods__list">
+              <li class="goods__item product">
+                <h3 class="product__title">Сахарозаменитель</h3>
+                <div class="product__wrapper">
+                  <p class="product__text">1 упаковка (100 г)</p>
+                  <p class="product__text">200 ₽</p>
+                </div>
+                <a class="product__button button" href="#">Заказать</a>
+              </li>
 
-            <li class="goods__item product">
-              <h3 class="product__title">Питьевая вода</h3>
-              <p class="product__text">5 литров</p>
-              <p class="product__text">50 ₽</p>
-              <a class="product__button button" href="#">Заказать</a>
-            </li>
+              <li class="goods__item product">
+                <h3 class="product__title">Питьевая вода</h3>
+                <div class="product__wrapper">
+                  <p class="product__text">5 литров</p>
+                  <p class="product__text">50 ₽</p>
+                </div>
+                <a class="product__button button" href="#">Заказать</a>
+              </li>
 
-            <li class="goods__item product">
-              <h3 class="product__title">Молоко</h3>
-              <p class="product__text">1 литр</p>
-              <p class="product__text">100 ₽</p>
-              <a class="product__button button" href="#">Заказать</a>
-            </li>
+              <li class="goods__item product">
+                <h3 class="product__title">Молоко</h3>
+                <div class="product__wrapper">
+                  <p class="product__text">1 литр</p>
+                  <p class="product__text">100 ₽</p>
+                </div>
+                <a class="product__button button" href="#">Заказать</a>
+              </li>
 
-            <li class="goods__item product">
-              <h3 class="product__title">Витамины</h3>
-              <p class="product__text">1 упаковка (30 г)</p>
-              <p class="product__text">300 ₽</p>
-              <a class="product__button button" href="#">Заказать</a>
-            </li>
-          </ul>
+              <li class="goods__item product">
+                <h3 class="product__title">Витамины</h3>
+                <div class="product__wrapper">
+                  <p class="product__text">1 упаковка (30 г)</p>
+                  <p class="product__text">300 ₽</p>
+                </div>
+                <a class="product__button button" href="#">Заказать</a>
+              </li>
+            </ul>
 
-          <aside class="goods__banner banner">
-            <h2 class="visually-hidden">Специальное предложение</h2>
-            <img class="banner__icon" src="images/icons/icon-gift.svg" width="78" height="80" alt="Иконка подарка">
-            <p class="banner__text">Закажите все и получите чехол для кота в подарок!</p>
-          </aside>
+            <aside class="goods__banner banner">
+              <h2 class="visually-hidden">Специальное предложение</h2>
+              <img class="banner__icon" src="images/icons/icon-gift.svg" width="78" height="80" alt="Иконка подарка">
+              <p class="banner__text">Закажите все<br class="banner__br"> и получите чехол для кота в подарок!</p>
+            </aside>
+          </div>
         </div>
       </section>
 
     </main>
 
     <footer class="main-footer">
-      <section class="main-footer__map map map--home">
+      <section class="main-footer__map map">
         <div class="map__container container">
           <h2 class="visually-hidden">Местонахождение.</h2>
           <div class="map__contact">
