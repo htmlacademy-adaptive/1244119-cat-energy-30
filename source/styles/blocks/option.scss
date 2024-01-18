@@ -2,5 +2,54 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  &--radio {
+    margin-top: 27px;
+  }
 }
 
+.option__item {
+  position: relative;
+}
+
+.option__item:not(:last-child) {
+  padding-bottom: 19px;
+}
+
+.option__input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.option__input--radio {
+  position: absolute;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid $moderate-grey;
+  border-radius: 50%;
+  top: -4px;
+  left: 0;
+  z-index: 2;
+
+  &:checked::before {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-color: $green;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+.option__label {
+  padding-left: 45px;
+  cursor: pointer;
+}
