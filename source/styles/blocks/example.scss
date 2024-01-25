@@ -7,6 +7,7 @@
     position: relative;
     border-top: 1px solid $pale-grey;
     margin-top: 75px;
+    overflow: hidden;
 
     &::after {
       content: "";
@@ -37,7 +38,7 @@
 }
 
 .example__container {
-  margin-top: 53px;
+  margin-top: 49px;
 
   @media (min-width: $tablet-width) {
     margin-top: 20px;

@@ -10,23 +10,32 @@
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 94px 60px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 63px;
+    gap: 97px 63px;
   }
 }
 
 .catalog__item {
+  position: relative;
+
   @media (max-width: 767px) {
-    border-bottom: 1px solid red;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1px;
+      background-color: $mat-grey;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   @media (min-width: $tablet-width) {
-    position: relative;
     width: 324px;
-    height: 511px;
 
     &::before {
       content: "";

@@ -194,10 +194,10 @@
   width: 37px;
   height: 12px;
   top: 11px;
-  left: 105px;
+  left: calc(100% - 36px);
 
   @media (min-width: $tablet-width) {
     top: 14px;
-    left: 135px;
+    left: calc(100% - 31px);
   }
 }

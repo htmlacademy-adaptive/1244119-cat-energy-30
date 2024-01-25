@@ -1,3 +1,51 @@
+.logo {
+  &--header {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    &:active {
+      opacity: 0.6;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  &--footer svg {
+    &:hover,
+    &:focus {
+      color: $deep-grey;
+      --color-logo-text: #3e3e3e;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    &:active {
+      color: $dirty-grey;
+      --color-logo-text: #6b6b6b;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  }
+}
+
 .logo__image {
   object-fit: cover;
+}
+
+.logo__image--text {
+  color: $black;
+  fill: currentColor;
+  --color-logo-text: #111111;
+  margin-bottom: 5px;
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 24px;
+  }
+}
+
+.main-header__logo .logo__image--text {
+  @media (min-width: $tablet-width) {
+    --color-logo-text: #444444;
+  }
 }

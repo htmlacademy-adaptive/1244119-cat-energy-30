@@ -17,17 +17,26 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 67px;
+    padding-top: 70px;
     padding-bottom: 62px;
   }
 }
 
 .main-footer__logo {
   padding: 8px;
-  margin-top: 28px;
+  margin-top: 27px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding: 0;
+    padding: 4px 0 0 1px;
+  }
+}
+
+.main-footer__logo .logo__image {
+  @media (min-width: $desktop-width) {
+    width: 127px;
+    height: 30px;
+    margin: 0;
+    padding-bottom: 4px;
   }
 }

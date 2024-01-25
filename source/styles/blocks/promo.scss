@@ -60,7 +60,7 @@
       z-index: -1;
     }
 
-    @media (min-resolution: 2dppx) {
+    @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
       background-image: url("../../images/cat-desktop@2x.png");
     }
   }
@@ -71,6 +71,7 @@
   z-index: 2;
 
   @media (min-width: $tablet-width) and (max-width: 1439px) {
+    overflow: hidden;
     height: 820px;
   }
 
@@ -99,8 +100,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 96px;
-    padding-left: 80px;
+    padding: 96px 720px 0 80px;
   }
 }
 

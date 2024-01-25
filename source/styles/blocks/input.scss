@@ -1,0 +1,19 @@
+.input {
+  &:hover {
+    border-color: $moderate-grey;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  &:focus {
+    border-color: $grey;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  &--error {
+    border-color: $error;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
