@@ -96,8 +96,9 @@
   margin: 0;
   width: 30px;
   height: 30px;
-  background-image: url("../../images/icons/stack.svg#check-off");
+  mask-image: url("../../images/icons/stack.svg#check-off");
   background-repeat: no-repeat;
+  color: $moderate-grey;
   top: -4px;
   left: 0;
 
@@ -106,10 +107,23 @@
     height: 40px;
     top: -6px;
   }
+
+  &:hover,
+  &:focus {
+    color: $soft-grey;
+  }
 }
 
 .option__input--check:checked {
-  background-image: url("../../images/icons/stack.svg#check-on");
+  mask-image: url("../../images/icons/stack.svg#check-on");
+  color: $moderate-grey;
+  fill: currentColor;
+  --color-check-on: #68B738;
+
+  &:hover,
+  &:focus {
+    color: $soft-grey;
+  }
 }
 
 .option__label {
