@@ -50,9 +50,13 @@
           </div>
           <div class="promo__image">
             <picture>
+              <source media="(min-width: 1440px)" srcset="images/glass-desktop@1x.webp 1x, images/glass-desktop@2x.webp 2x" type="image/webp" width="552" height="499">
+              <source media="(min-width: 768px)" srcset="images/glass-tablet@1x.webp 1x, images/glass-tablet@2x.webp 2x" type="image/webp" width="709" height="609">
+              <source srcset="images/glass-mobile@1x.webp 1x, images/glass-mobile@2x.webp 2x" type="image/webp" width="280" height="270">
+
               <source media="(min-width: 1440px)" srcset="images/glass-desktop@1x.png 1x, images/glass-desktop@2x.png 2x" type="image/png" width="552" height="499">
               <source media="(min-width: 768px)" srcset="images/glass-tablet@1x.png 1x, images/glass-tablet@2x.png 2x" type="image/png" width="709" height="609">
-              <img src="images/glass-mobile@1x.png" srcset="images/glass-mobile@2x.png 2x" alt="Корм Cat Energy курица 500г" width="280" height="270">
+              <img src="images/glass-mobile@1x.png" srcset="images/glass-mobile@2x.png 2x" width="280" height="270" alt="Корм Cat Energy курица 500г">
             </picture>
           </div>
           <a class="promo__button button" href="form.html">Подобрать программу</a>
@@ -114,17 +118,29 @@
           <div class="example__slider slider">
             <div class="slider__image slider__image--before">
               <picture>
+                <source media="(min-width: 768px)" srcset="images/slider/cat-before@1x.webp 1x, images/slider/cat-before@2x.webp 2x" type="image/webp" width="560" height="512">
+                <source srcset="images/slider/mobile-cat-before@1x.webp 1x, images/slider/mobile-cat-before@2x.webp 2x" type="image/webp" width="280" height="256">
+
                 <source media="(min-width: 768px)" srcset="images/slider/cat-before@1x.png 1x, images/slider/cat-before@2x.png 2x" type="image/png" width="560" height="512">
                 <img src="images/slider/mobile-cat-before@1x.png" srcset="images/slider/mobile-cat-before@2x.png 2x" width="280" height="256" alt="Упитанный кот">
               </picture>
             </div>
             <div class="slider__image slider__image--after">
               <picture>
+                <source media="(min-width: 768px)" srcset="images/slider/cat-after@1x.webp 1x, images/slider/cat-after@2x.webp 2x" type="image/webp" width="560" height="512">
+                <source srcset="images/slider/mobile-cat-after@1x.webp 1x, images/slider/mobile-cat-after@2x.webp 2x" type="image/webp" width="280" height="256">
+
                 <source media="(min-width: 768px)" srcset="images/slider/cat-after@1x.png 1x, images/slider/cat-after@2x.png 2x" type="image/png" width="560" height="512">
                 <img src="images/slider/mobile-cat-after@1x.png" srcset="images/slider/mobile-cat-after@2x.png 2x" width="280" height="256" alt="Стройный кот">
               </picture>
             </div>
-            <button class="slider__control" type="button" aria-label="Управление ползунком"></button>
+            <button class="slider__control" type="button" aria-label="Управление ползунком">
+              <span class="slider__svg">
+                <svg width="40" height="40" aria-hidden="true" focusable="false">
+                  <use href="images/icons/stack.svg#slider-button"></use>
+                </svg>
+              </span>
+            </button>
           </div>
         </div>
       </section>
@@ -133,25 +149,29 @@
     <footer class="main-footer">
       <section class="main-footer__map map map--index">
         <div class="map__container container">
-          <h2 class="visually-hidden">Местонахождение.</h2>
+          <h2 class="visually-hidden">Адрес местонахождение.</h2>
           <div class="map__contact">
             <h3 class="map__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h3>
             <p class="map__address">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8 <span>Санкт-Петербург</span></p>
           </div>
         </div>
 
-        <div class="map__iframe-container">
+        <div class="map__iframe-container map__iframe-container--no-js">
           <noscript>
-            <a class="map__img" href="#">
+            <a class="map__img" href="#" aria-label="Карта с адресом местоположения">
               <picture>
+                <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" type="image/webp" width="1440" height="400">
+                <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.webp 1x, images/map/map-tablet@2x.webp 2x" type="image/webp" width="768" height="400">
+                <source srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x" type="image/webp" width="320" height="362">
+
                 <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.jpg 1x, images/map/map-desktop@2x.jpg 2x" type="image/jpeg" width="1440" height="400">
                 <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.jpg 1x, images/map/map-tablet@2x.jpg 2x" type="image/jpeg" width="768" height="400">
-                <img src="images/map/map-mobile@1x.jpg" srcset="images/map/map-mobile@2x.jpg 2x" alt="Карта" width="320" height="362">
+                <img src="images/map/map-mobile@1x.jpg" srcset="images/map/map-mobile@2x.jpg 2x" width="320" height="362" alt="Карта">
               </picture>
             </a>
           </noscript>
           <div class="map__iframe">
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.58095197757!2d30.319410323390894!3d59.93909537160517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603140540112!5m2!1sru!2sru" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.58095197757!2d30.319410323390894!3d59.93909537160517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1603140540112!5m2!1sru!2sru" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
           </div>
         </div>
       </section>
@@ -176,7 +196,7 @@
         </ul>
 
         <a class="main-footer__academy academy" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Онлайн‑курс HTML и CSS" rel="noreferrer noopener" target="_blank">
-          <span class="academy__text">HTML Academy</span>
+          <p class="academy__text">HTML Academy</p>
           <svg class="academy__logo" width="27" height="34" aria-hidden="true" focusable="false">
             <use href="images/icons/stack.svg#htmlacademy"></use>
           </svg>

@@ -14,28 +14,6 @@
     height: 623px;
     top: -63px;
   }
-
-  &::before {
-    content: "";
-    width: 4px;
-    height: 256px;
-    background-color: $light-grey;
-    border-radius: 2px;
-    position: absolute;
-    top: 20px;
-    left: 138px;
-    cursor: pointer;
-
-    @media (min-width: $tablet-width) {
-      height: 512px;
-      top: 89px;
-      left: 352px;
-    }
-
-    @media (min-width: $desktop-width) {
-      left: 278px;
-    }
-  }
 }
 
 .slider__image {
@@ -67,20 +45,69 @@
 }
 
 .slider__control {
-  background-image: url("../../images/icons/stack.svg#slider-button");
-  background-color: transparent;
-  background-repeat: no-repeat;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
   border: none;
+  background-color: transparent;
   position: relative;
-  bottom: 148px;
+  bottom: 147px;
   left: 120px;
   cursor: pointer;
 
+  span {
+    color: $white;
+    fill: currentColor;
+    --color-slider-button: #666666;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    width: 4px;
+    height: 256px;
+    background-color: $light-grey;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -107px;
+    left: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: $green;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    span {
+      --color-slider-button: #68b738;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $dark-green;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    span {
+      --color-slider-button: #5eaa2f;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  }
+
   @media (min-width: $tablet-width) {
-    bottom: 337px;
+    bottom: 336px;
     left: 260px;
+
+    &::before {
+      height: 512px;
+      bottom: -235px;
+    }
   }
 }

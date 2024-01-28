@@ -12,11 +12,11 @@
   @media (min-width: $tablet-width) {
     width: auto;
     max-width: 300px;
-    margin: 0 0 4px 35px;
+    margin: 0 0 0 35px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 34px;
+    margin-left: 35px;
   }
 }
 
@@ -38,5 +38,14 @@
 
   &--telegram {
     mask-image: url("../../images/icons/stack.svg#telegram");
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $green;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

@@ -1,23 +1,30 @@
 .option {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 13px;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .option--radio {
-  margin-top: 27px;
+  padding-top: 23px;
 
   @media (min-width: $tablet-width) {
-    padding-left: 42px;
+    row-gap: 13px;
+    padding: 20px 0 0 27px;
+
   }
 }
 
 .option--check {
+  row-gap: 12px;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 60px;
-    row-gap: 19px;
+    row-gap: 32px;
   }
 
   @media (min-width: $desktop-width) {
@@ -27,106 +34,87 @@
 }
 
 .option__item {
-  position: relative;
-}
-
-.option--check .option__item {
-  @media (min-width: $tablet-width) {
-    padding-left: 15px;
-  }
-}
-
-.option__item:not(:last-child) {
-  padding-bottom: 19px;
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 23px;
-  }
+  display: flex;
 }
 
 .option__input {
-  position: absolute;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-
-.option__input--radio {
-  position: absolute;
-  margin: 0;
   width: 30px;
   height: 30px;
-  background-color: transparent;
   border: 1px solid $moderate-grey;
-  border-radius: 50%;
-  top: -4px;
-  left: 0;
-  z-index: 2;
-
-  &:checked::before {
-    content: "";
-    position: absolute;
-    width: 13px;
-    height: 13px;
-    background-color: $green;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-  }
+  margin: 0;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
-    top: -6px;
-    left: -15px;
+  }
+
+  &--radio {
+    border-radius: 50%;
 
     &:checked::before {
-      width: 18px;
-      height: 18px;
-      top: 19px;
-      left: 19px;
+      content: "";
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background-color: $green;
+      background-position: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: $tablet-width) {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
-}
 
-.option__input--check {
-  position: absolute;
-  margin: 0;
-  width: 30px;
-  height: 30px;
-  mask-image: url("../../images/icons/stack.svg#check-off");
-  background-repeat: no-repeat;
-  color: $moderate-grey;
-  top: -4px;
-  left: 0;
+  &--check {
+    &:checked::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      mask-image: url("../../images/icons/stack.svg#check-on");
+      mask-repeat: no-repeat;
+      background-color: $green;
+      background-position: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-  @media (min-width: $tablet-width) {
-    width: 40px;
-    height: 40px;
-    top: -6px;
+      @media (min-width: $tablet-width) {
+        width: 26px;
+        height: 26px;
+      }
+    }
   }
 
   &:hover,
   &:focus {
-    color: $soft-grey;
+    border-color: $soft-grey;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
-}
 
-.option__input--check:checked {
-  mask-image: url("../../images/icons/stack.svg#check-on");
-  color: $moderate-grey;
-  fill: currentColor;
-  --color-check-on: #68B738;
-
-  &:hover,
-  &:focus {
-    color: $soft-grey;
+  &:disabled,
+  &:disabled + .option__label {
+    border-color: $soft-grey;
+    opacity: 0.3;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 }
 
 .option__label {
-  padding-left: 45px;
+  padding: 7px 0 0 15px;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding: 6px 0 0 20px;
+  }
 }

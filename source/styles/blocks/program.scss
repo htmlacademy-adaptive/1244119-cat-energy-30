@@ -183,6 +183,15 @@
     margin-left: 47px;
     padding-right: 55px;
   }
+
+  &:hover::before,
+  &:focus::before {
+    background-position-x: 0;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .program__link::before {
@@ -190,14 +199,16 @@
   position: absolute;
   background-image: url("../../images/icons/stack.svg#arrow");
   background-repeat: no-repeat;
+  background-position: -8px center;
   object-fit: cover;
-  width: 37px;
+  width: 32px;
   height: 12px;
   top: 11px;
-  left: calc(100% - 36px);
+  left: calc(100% - 33px);
+  transition: background-position-x 0.3s ease-in-out;
 
   @media (min-width: $tablet-width) {
     top: 14px;
-    left: calc(100% - 31px);
+    left: calc(100% - 29px);
   }
 }
