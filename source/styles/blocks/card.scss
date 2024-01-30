@@ -47,7 +47,7 @@
 .card__link-title {
   display: block;
   text-decoration: none;
-  width: fit-content;
+  width: 75px;
 
   &:hover,
   &:focus {
@@ -59,6 +59,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    width: 130px;
     margin: 0 auto;
   }
 }
@@ -69,13 +70,11 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $dark-grey;
-  width: 75px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    width: 130px;
   }
 }
 
