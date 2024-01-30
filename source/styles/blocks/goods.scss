@@ -3,7 +3,7 @@
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 76px;
+    margin-bottom: 75px;
   }
 
   @media (min-width: $desktop-width) {
@@ -12,10 +12,10 @@
 }
 
 .goods__container {
-  margin-top: 26px;
+  margin-top: 25px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 70px;
+    margin-top: 69px;
   }
 
   @media (min-width: $desktop-width) {
@@ -80,6 +80,12 @@
     display: flex;
     justify-content: space-between;
   }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    gap: 80px;
+  }
 }
 
 .goods__list {
@@ -94,16 +100,21 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 895px;
     margin-top: 79px;
   }
 }
 
 .goods__item {
+  padding: 14px 0 18px;
   border-bottom: 1px solid $moderate-grey;
 
   @media (min-width: $tablet-width) and (max-width: 1439px) {
+    padding: 25px 37px 28px;
     border-left: 1px solid $moderate-grey;
     border-right: 1px solid $moderate-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0 16px;
   }
 }

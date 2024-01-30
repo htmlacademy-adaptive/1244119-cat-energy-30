@@ -2,13 +2,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 140px;
   text-decoration: none;
-  width: 280px;
-  margin-bottom: 34px;
+  margin: 19px 0 40px;
+
+  &:hover,
+  &:focus {
+    .academy__logo {
+      color: $green;
+    }
+  }
+
+  &:active {
+    .academy__text,
+    .academy__logo {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: $tablet-width) {
-    width: 162px;
-    margin-bottom: 5px;
+    gap: 22px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 24px;
   }
 }
 
@@ -17,4 +35,9 @@
   font-size: 16px;
   line-height: 20px;
   color: $grey;
+}
+
+.academy__logo {
+  color: $light-grey;
+  fill: currentColor;
 }

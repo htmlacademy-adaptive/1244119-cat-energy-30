@@ -32,9 +32,29 @@
   }
 }
 
+.intro--form .intro__title {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    padding: 65px 40px 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 74px 0 55px;
+  }
+}
+
 .intro__text {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  padding-top: 38px;
+  padding: 38px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 340px 65px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 890px 66px 0;
+  }
 }

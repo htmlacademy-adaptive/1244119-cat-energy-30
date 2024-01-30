@@ -1,56 +1,66 @@
 .card {
-  @media (max-width: 767px) {
-    display: flex;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 12px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 5px;
   }
 }
 
 .card__link-img {
-  display: block;
-  width: 140px;
-  height: 107px;
-
-  @media (min-width: $tablet-width) {
-    width: 200px;
-    height: 210px;
-    margin-top: 10px;
-    margin-left: 62px;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
   }
 
-  @media (min-width: $desktop-width) {
-    width: 169px;
-    margin-top: 9px;
-    margin-left: 21px;
+  &:active {
+    opacity: 0.6;
   }
-}
-
-.card__image {
-  transform: translate(53%, 33%);
 
   @media (min-width: $tablet-width) {
-    transform: translate(13%, 12%);
+    display: block;
+    margin: -91px auto 0;
   }
 }
 
 .card__wrapper {
-  width: 139px;
-  margin-top: 22px;
+  display: grid;
+  row-gap: 5px;
+  padding-top: 2px;
 
   @media (min-width: $tablet-width) {
-    width: 250px;
-    margin-top: 23px;
-    margin-left: 37px;
+    row-gap: 19px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 169px;
-    margin-top: 12px;
-    margin-left: 38px;
+    row-gap: 25px;
   }
 }
 
 .card__link-title {
+  display: block;
   text-decoration: none;
+  width: fit-content;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
 }
 
 .card__title {
@@ -66,35 +76,38 @@
     line-height: 24px;
     text-align: center;
     width: 130px;
-    margin: 0 auto;
   }
 }
 
 .card__list {
-  display: flex;
-  flex-direction: column;
   margin: 0;
-  margin-top: 14px;
 
   @media (min-width: $tablet-width) {
-    gap: 7px;
-    margin-top: 19px;
-    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 7px;
+    padding-bottom: 16px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 25px;
-    margin-bottom: 37px;
+    padding-bottom: 29px;
   }
 }
 
 .card__item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   @media (min-width: $tablet-width) {
+    gap: 160px;
     padding-bottom: 4px;
     border-bottom: 1px solid $moderate-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 80px;
+    padding-bottom: 5px;
   }
 }
 
@@ -115,6 +128,7 @@
   font-size: 12px;
   line-height: 16px;
   color: $grey;
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -123,23 +137,66 @@
 }
 
 .card__button {
+  grid-column: 1 / -1;
   display: block;
   font-size: 16px;
   line-height: 20px;
-  width: 280px;
-  height: 40px;
-  padding: 10px 0;
-  margin-bottom: 4px;
+  padding: 10px 10px;
 
   @media (min-width: $tablet-width) {
-    width: 250px;
-    margin-left: 37px;
-    padding: 10px 0;
+    padding: 10px 95px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 169px;
-    margin-left: 38px;
+    padding: 10px 54px;
+  }
+}
+
+.card--more {
+  grid-template-columns: 1fr;
+  row-gap: 0;
+  justify-items: center;
+  padding-top: 79px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: url("../../images/icons/stack.svg#plus");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: repeat(3, min-content);
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px $super-light-grey;
+    padding-top: 162px;
+
+    &::after {
+      width: 60px;
+      height: 60px;
+      top: 51px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 150px;
+  }
+
+  .card__title {
+    @media (min-width: $tablet-width) {
+      padding: 0 75px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 50px;
+    }
   }
 }
 
@@ -147,103 +204,39 @@
   font-family: $lato;
   font-size: 12px;
   line-height: 16px;
-  color: $grey;
-}
-
-.card--more {
-  position: relative;
+  padding: 8px 0 20px;
 
   @media (min-width: $tablet-width) {
-    height: 429px;
-    border: 2px solid $super-light-grey;
-  }
-
-  .card__title {
-    text-align: center;
-    width: 100%;
-    padding-top: 79px;
-
-    @media (min-width: $tablet-width) {
-      width: 140px;
-      padding-top: 159px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding-top: 147px;
-    }
-  }
-
-  .card__text {
-    text-align: center;
-    width: 100%;
-    padding-bottom: 10px;
-
-    @media (min-width: $tablet-width) {
-      font-size: 16px;
-      line-height: 18px;
-      width: 175px;
-      margin: 0 auto;
-      padding-top: 22px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding-top: 26px;
-    }
-  }
-
-  .card__button {
     font-size: 16px;
-    line-height: 20px;
-    width: 280px;
-    padding: 10px 0;
-    margin-bottom: 13px;
-    color: $grey;
-    background-color: $super-light-grey;
-
-    @media (min-width: $tablet-width) {
-      width: 250px;
-      margin-top: 73px;
-      margin-left: 35px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 169px;
-      margin-top: 80px;
-      margin-left: 36px;
-    }
+    line-height: 18px;
+    text-align: center;
+    padding: 22px 50px 82px;
   }
 
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 30px;
-    background-color: $dull-grey;
-    top: 25px;
-    left: 139px;
-
-    @media (min-width: $tablet-width) {
-      height: 60px;
-      top: 49px;
-      left: 160px;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: 47px;
-      left: 120px;
-    }
-  }
-
-  &::after {
-    transform: rotate(90deg);
+  @media (min-width: $desktop-width) {
+    padding: 26px 35px 90px;
   }
 }
 
 .card__button--more {
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  text-decoration: none;
+  background-color: $super-light-grey;
   color: $grey;
+  padding: 10px 95px;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 40px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $mat-grey;
+  }
+
+  &:active {
+    color: $black;
+  }
 }

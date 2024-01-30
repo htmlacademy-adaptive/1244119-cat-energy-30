@@ -1,6 +1,120 @@
 .option {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 13px;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+.option--radio {
+  padding-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 13px;
+    padding: 20px 0 0 27px;
+  }
+}
+
+.option--check {
+  row-gap: 12px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+    row-gap: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.option__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.option__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $moderate-grey;
+  margin: 0;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &--radio {
+    border-radius: 50%;
+
+    &:checked::before {
+      content: "";
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background-color: $green;
+      background-position: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: $tablet-width) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &--check {
+    &:checked::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      mask-image: url("../../images/icons/stack.svg#check-on");
+      mask-repeat: no-repeat;
+      background-color: $green;
+      background-position: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (min-width: $tablet-width) {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $soft-grey;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  &:disabled,
+  &:disabled + .option__label {
+    border-color: $soft-grey;
+    opacity: 0.3;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.option__label {
+  padding: 0 0 0 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 0 20px;
+  }
+}

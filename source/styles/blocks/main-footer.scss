@@ -4,30 +4,58 @@
 
 .main-footer__container {
   display: grid;
-  grid-template-rows: repeat(3, 80px);
+  grid-template-rows: 1fr;
+  row-gap: 21px;
   align-items: center;
   justify-items: center;
+  position: relative;
+
+  @media (max-width: 767px) {
+    &::before,
+    &::after {
+      content: "";
+      width: 280px;
+      height: 1px;
+      background-color: $bright-grey;
+      position: absolute;
+      top: 83px;
+      left: 20px;
+    }
+
+    &::after {
+      top: 145px;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 57px;
+    padding-top: 52px;
     padding-bottom: 52px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 67px;
-    padding-bottom: 62px;
+    padding: 63px 20px 65px;
   }
 }
 
 .main-footer__logo {
   padding: 8px;
-  margin-top: 28px;
+  margin-top: 30px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    padding: 0;
+    padding: 8px 0 0 1px;
+  }
+}
+
+.main-footer__logo .logo__image {
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    width: 127px;
+    height: 30px;
+    padding-bottom: 4px;
   }
 }

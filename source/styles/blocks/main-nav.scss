@@ -1,32 +1,39 @@
 .main-nav {
   position: relative;
-}
 
-.main-nav--close {
-  @media (min-width: $mobile-width) and (max-width: 767px) {
+  @media (max-width: 767px) {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    z-index: 3;
     display: none;
   }
 }
 
-.main-nav__toggle {
-  position: absolute;
-  right: 1px;
-  top: -28px;
+.main-nav--open {
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.main-header__toggle {
+  margin: 0;
   width: 24px;
-  height: 16px;
+  height: 24px;
   border: 0;
+
   padding: 0;
   background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: center;
   cursor: pointer;
 
   span {
     position: relative;
     display: inline-block;
-    right: 0;
-    top: 0;
+    right: 1px;
+    top: -1px;
     background-color: $black;
     width: 24px;
     height: 2px;
@@ -52,5 +59,30 @@
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.main-header__toggle--open {
+  span {
+    background-color: transparent;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -4px;
+      width: 25px;
+      height: 2px;
+      background-color: $black;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
   }
 }

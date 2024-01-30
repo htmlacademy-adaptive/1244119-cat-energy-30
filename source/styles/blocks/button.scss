@@ -4,4 +4,15 @@
   text-align: center;
   color: $white;
   background-color: $green;
+
+  &:hover,
+  &:focus {
+    background-color: $dark-green;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 }
