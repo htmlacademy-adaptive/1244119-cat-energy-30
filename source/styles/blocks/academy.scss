@@ -4,7 +4,7 @@
   align-items: center;
   gap: 140px;
   text-decoration: none;
-  margin: 7px 0 40px;
+  margin: 19px 0 40px;
 
   &:hover,
   &:focus {
@@ -22,7 +22,7 @@
 
   @media (min-width: $tablet-width) {
     gap: 22px;
-    margin: 0 0 2px 0;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {

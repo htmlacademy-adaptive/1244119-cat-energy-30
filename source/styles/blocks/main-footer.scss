@@ -36,7 +36,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 63px 110px 65px;
+    padding: 63px 20px 65px;
   }
 }
 
@@ -51,10 +51,11 @@
 }
 
 .main-footer__logo .logo__image {
+  margin: 0;
+
   @media (min-width: $desktop-width) {
     width: 127px;
     height: 30px;
-    margin: 0;
     padding-bottom: 4px;
   }
 }
